@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.sass';
 
 interface ListProps {
   todoList: string[];
@@ -6,9 +7,11 @@ interface ListProps {
 
 const List = ({ todoList }: ListProps) => {
   return (
-    <div>
+    <div className="todo-list-items">
       {todoList.map((todo, idx) => (
-        <p key={idx}>{todo}</p>
+        <p className="todo-list-item" key={idx}>
+          {todo}
+        </p>
       ))}
     </div>
   );

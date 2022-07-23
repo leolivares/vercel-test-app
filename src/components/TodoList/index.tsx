@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import List from './List';
 import TodoInput from './TodoInput';
+import './style.sass';
 
 const TodoList = () => {
   const [todoList, setTodoList] = useState<string[]>([
