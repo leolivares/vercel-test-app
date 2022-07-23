@@ -21,7 +21,7 @@ const TodoInput = ({
       />
 
       <button type="submit" onClick={handleSubmit}>
-        Add Item
+        Add Item!
       </button>
     </form>
   );
