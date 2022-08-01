@@ -7,7 +7,7 @@ interface ListProps {
 
 const List = ({ todoList }: ListProps) => {
   return (
-    <div className="todo-list-items">
+    <div className="todo-list-items" data-testid="todo-list-items">
       {todoList.map((todo, idx) => (
         <p className="todo-list-item" key={idx}>
           {todo}
