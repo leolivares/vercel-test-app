@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import List from './List';
 import TodoInput from './TodoInput';
 import './style.sass';
