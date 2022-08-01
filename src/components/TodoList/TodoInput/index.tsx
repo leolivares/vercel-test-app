@@ -12,15 +12,20 @@ const TodoInput = ({
   inputValue,
 }: TodoInputProps) => {
   return (
-    <form>
+    <form data-testid="todo-form">
       <input
         type="text"
         placeholder="Enter Item"
         onChange={handleOnChange}
         value={inputValue}
+        data-testid="todo-input"
       />
 
-      <button type="submit" onClick={handleSubmit}>
+      <button
+        type="submit"
+        data-testid="todo-input-button"
+        onClick={handleSubmit}
+      >
         Add Item!
       </button>
     </form>

@@ -3,11 +3,12 @@ import List from './List';
 import TodoInput from './TodoInput';
 import './style.sass';
 
-const TodoList = () => {
-  const [todoList, setTodoList] = useState<string[]>([
-    'Hacer algo',
-    'No hacer nada',
-  ]);
+interface TodoListProps {
+  todoItems: string[];
+}
+
+const TodoList = ({ todoItems = [] }: TodoListProps) => {
+  const [todoList, setTodoList] = useState<string[]>(todoItems);
   const [inputValue, setInputValue] = useState<string>('');
 
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
@@ -21,7 +22,7 @@ const TodoList = () => {
   };
 
   return (
-    <div className="todo-list-container">
+    <div className="todo-list-container" data-testid="todo-list-container">
       <h1>TODO LIST</h1>
 
       <TodoInput
